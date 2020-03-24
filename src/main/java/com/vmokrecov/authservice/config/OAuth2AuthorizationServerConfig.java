@@ -57,6 +57,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
                 .and()
                 .withClient("server_app")
                 .secret(passwordEncoder().encode(serverAppSecret))
+                .authorities("ROLE_USER", "ROLE_ADMIN")
                 .authorizedGrantTypes(AuthorizedGrantTypes.CLIENT_CREDENTIALS, AuthorizedGrantTypes.REFRESH_TOKEN)
                 .scopes("server")
                 .accessTokenValiditySeconds(3600)       // 1 hour
