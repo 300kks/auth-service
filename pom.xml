@@ -18,6 +18,7 @@
 		<java.version>11</java.version>
 		<spring-cloud.version>Hoxton.SR3</spring-cloud.version>
 		<opentracing-spring-jaeger.version>3.1.1</opentracing-spring-jaeger.version>
+		<swagger.version>2.9.2</swagger.version>
 	</properties>
 
 	<dependencies>
@@ -37,6 +38,16 @@
 			<groupId>io.opentracing.contrib</groupId>
 			<artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>
 			<version>${opentracing-spring-jaeger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${swagger.version}</version>
 		</dependency>
 
 		<dependency>
